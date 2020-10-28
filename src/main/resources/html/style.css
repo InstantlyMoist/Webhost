@@ -1,0 +1,162 @@
+html, body {
+    margin: 0px !important;
+    padding: 0px !important;
+    background-color: black;
+    font-family: 'Roboto';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+    cursor: pointer;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.divider {
+    width: 5px;
+    height: 15px;
+    display: inline-block;
+}
+
+#description {
+    margin-top: 10px;
+    font-size: 24px;
+    opacity: 50%;
+    color: white;
+}
+
+button {
+    width: 100%;
+    min-height: 120px;
+    font-family: 'Roboto';
+    border-radius: 5px;
+    text-align: left;
+    color: white;
+    border: none;
+    background-size: 200% 100%;
+    background-position: right bottom;
+    background-image: linear-gradient(to left, #3A3A3A 50%, #64CEB5 50%);
+    -webkit-transition: background-position 1s;
+    -moz-transition: background-position 1s;
+    transition: background-position 1s;
+}
+
+button#hire {
+    background-image: linear-gradient(to left, #282828 50%, #51AE98 50%);
+}
+
+button:hover {
+    background-position: left bottom;
+}
+
+button p {
+    margin: 20px;
+    font-size: 21px;
+}
+
+button p.buttonDescription {
+    opacity: 50%;
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+.screenside {
+    width: 50%;
+    height: 100%;
+}
+
+#buttoncontainer, #textcontainer {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+#buttoncontainer {
+    width: 80%;
+    float: right;
+}
+
+.text {
+    margin: 0px;
+    font-size: 36px;
+    color: white;
+}
+
+#textcontainer #description {
+    margin-bottom: 20px;
+    color: #65F3D2;
+}
+
+#row {
+    display: flex;
+}
+
+.icons {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+}
+
+.icon img {
+    margin-right: 8px;
+    height: 32px;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeInRight {
+    animation-name: fadeInRight;
+}
+
+#buttoncontainer p {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    .screenside {
+        width: 100%;
+    }
+    .text {
+        font-size: 28px;
+    }
+    #description {
+        font-size: 16px !important;
+    }
+    #content {
+        flex-direction: column;
+    }
+    #buttoncontainer {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .icon img {
+        height: 24px;
+    }
+}
