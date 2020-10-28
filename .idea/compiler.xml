@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for Webhost" enabled="true">
+        <sourceOutputDir name="server/plugins/temp/generated-sources/annotations" />
+        <sourceTestOutputDir name="server/plugins/temp/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Webhost" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
