@@ -2,6 +2,7 @@ package me.kyllian.webhost;
 
 import me.kyllian.webhost.files.FileLoader;
 import me.kyllian.webhost.web.ServerHandler;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -17,6 +18,8 @@ public class WebhostPlugin extends JavaPlugin {
         saveDefaultConfig();
 
         FileLoader.ensureIndexPopulated(this);
+
+        Metrics metrics = new Metrics(this, 9354);
 
         serverHandler = new ServerHandler(this);
         try {
