@@ -37,6 +37,12 @@ public class WebhostPluginBungee extends Plugin {
         fireServer();
     }
 
+    @Override
+    public void onDisable() {
+        super.onDisable();
+        serverHandler.stop();
+    }
+
     public void fireServer() {
         try {
             serverHandler.fire(getDataFolder(),
