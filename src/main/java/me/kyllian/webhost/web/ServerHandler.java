@@ -20,8 +20,8 @@ public class ServerHandler {
         ServletContextHandler context = new ServletContextHandler(
                 ServletContextHandler.SESSIONS);
         context.setContextPath("/");
-        context.setResourceBase(plugin.getDataFolder().getPath().concat("/html"));
-        context.setWelcomeFiles(new String[]{"index.html"});
+        context.setResourceBase(plugin.getDataFolder().getPath().concat(plugin.getConfig().getString("resource_base")));
+        context.setWelcomeFiles(plugin.getConfig().getStringList("welcome_files").toArray(new String[0]));
 
         ServletHolder holderPwd = new ServletHolder("default",
                 DefaultServlet.class);
