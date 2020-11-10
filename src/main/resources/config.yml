@@ -5,3 +5,7 @@
 # Be aware, this port MIGHT NOT work on every host.
 # If it does not, you can freely consider changing it. The base IP will not be the website. You will have to manually redirect it!
 port: 80
+resource_base: /html # Folder your html files will be in
+welcome_files: # Files that act as your welcome file (Index)
+  - index.html
+  - index.htm

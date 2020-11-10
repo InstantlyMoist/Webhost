@@ -1,4 +1,4 @@
-let possible = ['This is a page hosted using Spigot', 'It even supports scripts!', 'How awesome is this?!', 'Make sure to join my discord :D'];
+let possible = ['This is a page hosted using Spigot or Bungeecord', 'It even supports scripts!', 'How awesome is this?!', 'Make sure to join my discord :D'];
 let current = 0;
 let removalLength = 0;
 let flash = true;

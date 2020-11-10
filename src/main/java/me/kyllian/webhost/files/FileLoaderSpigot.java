@@ -1,13 +1,13 @@
 package me.kyllian.webhost.files;
 
-import me.kyllian.webhost.WebhostPlugin;
+import me.kyllian.webhost.WebhostPluginSpigot;
 import org.bukkit.Bukkit;
 
 import java.io.File;
 
-public class FileLoader {
+public class FileLoaderSpigot {
 
-    public static void ensureIndexPopulated(WebhostPlugin plugin) {
+    public static void ensureIndexPopulated(WebhostPluginSpigot plugin) {
         File htmlFolder = new File(plugin.getDataFolder(), "html");
         if (!htmlFolder.exists()) { // Default page does not exist, just generate a new one
             Bukkit.getLogger().info("Website not found... Populating now");

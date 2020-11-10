@@ -1,27 +1,23 @@
 package me.kyllian.webhost.web;
 
-import me.kyllian.webhost.WebhostPlugin;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 
+import java.io.File;
+
 public class ServerHandler {
 
-    private WebhostPlugin plugin;
     private Server server;
 
-    public ServerHandler(WebhostPlugin plugin) {
-        this.plugin = plugin;
-    }
-
-    public void fire() throws Exception {
-        server = new Server(plugin.getConfig().getInt("port"));
+    public void fire(File dataFolder, int port, String resourceBase, String[] welcomeFiles) throws Exception {
+        server = new Server(port);
         ServletContextHandler context = new ServletContextHandler(
                 ServletContextHandler.SESSIONS);
         context.setContextPath("/");
-        context.setResourceBase(plugin.getDataFolder().getPath().concat("/html"));
-        context.setWelcomeFiles(new String[]{"index.html"});
+        context.setResourceBase(dataFolder.getPath().concat(resourceBase));
+        context.setWelcomeFiles(welcomeFiles);
 
         ServletHolder holderPwd = new ServletHolder("default",
                 DefaultServlet.class);

@@ -1,4 +1,4 @@
 name: Webhost
-main: me.kyllian.webhost.WebhostPluginSpigot
+main: me.kyllian.webhost.WebhostPluginBungee
 version: ${project.version}
 author: Kyllian
