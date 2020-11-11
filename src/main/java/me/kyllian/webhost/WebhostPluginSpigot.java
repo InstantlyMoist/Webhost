@@ -1,5 +1,6 @@
 package me.kyllian.webhost;
 
+import me.kyllian.webhost.commands.WebhostExecutor;
 import me.kyllian.webhost.files.FileLoaderSpigot;
 import me.kyllian.webhost.web.ServerHandler;
 import org.bstats.bukkit.Metrics;
@@ -19,6 +20,8 @@ public class WebhostPluginSpigot extends JavaPlugin {
         FileLoaderSpigot.ensureIndexPopulated(this);
 
         new Metrics(this, 9354);
+
+        getCommand("webhost").setExecutor(new WebhostExecutor(this));
 
         serverHandler = new ServerHandler();
 

@@ -2,3 +2,8 @@ name: Webhost
 main: me.kyllian.webhost.WebhostPluginSpigot
 version: ${project.version}
 author: Kyllian
+
+commands:
+  webhost:
+    usage: /<command>
+    description: Base command of the plugin
