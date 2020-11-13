@@ -15,14 +15,13 @@ public class FileLoaderBungee {
             plugin.getLogger().info("Website not found... Populating now");
             htmlFolder.mkdirs();
             new File(dataFolder, "html/assets").mkdir();
-            new File(dataFolder, "html/script").mkdir();
-            saveResource(plugin, dataFolder, "html/assets/discord.svg");
-            saveResource(plugin, dataFolder, "html/assets/github.svg");
-            saveResource(plugin, dataFolder, "html/assets/world.svg");
-            saveResource(plugin, dataFolder, "html/assets/discord.svg");
-            saveResource(plugin, dataFolder, "html/script/index.js");
+            new File(dataFolder, "html/assets/css").mkdir();
+            new File(dataFolder, "html/assets/img").mkdir();
+            new File(dataFolder, "html/assets/js").mkdir();
+            saveResource(plugin, dataFolder, "html/assets/css/style.css");
+            saveResource(plugin, dataFolder, "html/assets/img/background.png");
+            saveResource(plugin, dataFolder, "html/assets/js/main.js");
             saveResource(plugin, dataFolder, "html/index.html");
-            saveResource(plugin, dataFolder, "html/style.css");
             plugin.getLogger().info("Site populated...");
             // Am I too lazy to make this dynamic? Yes
             // Will I ever change this site? Probably not
