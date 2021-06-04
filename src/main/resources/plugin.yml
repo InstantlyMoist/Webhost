@@ -2,6 +2,7 @@ name: Webhost
 main: me.kyllian.webhost.WebhostPluginSpigot
 version: ${project.version}
 author: Kyllian
+api-version: 1.13
 
 commands:
   webhost:
