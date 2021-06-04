@@ -16,13 +16,20 @@ public class WebhostPluginSpigot extends JavaPlugin {
     @Override
     public void onEnable() {
         super.onEnable();
+        
+        this.saveDefaultConfig();
 
         FileLoaderSpigot.ensureIndexPopulated(this);
 
         new Metrics(this, 9354);
 
         getCommand("webhost").setExecutor(new WebhostExecutor(this));
+        
+        resetHandler();
 
+    }
+    
+    public void resetHandler() {
         serverHandler = new ServerHandler();
 
         fireServer();
@@ -47,6 +54,10 @@ public class WebhostPluginSpigot extends JavaPlugin {
             Bukkit.getLogger().warning("Firing web server FAILED, Please contact support: https://discord.gg/zgKr2YM");
             exception.printStackTrace();
         }
+    }
+    
+    public ServerHandler getServerHandler() {
+    	return this.serverHandler;
     }
 
     @Override
