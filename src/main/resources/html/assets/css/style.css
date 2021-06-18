@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to right, rgba(44, 47, 51, 0.5), rgba(44, 47, 51, 0.5)), url(../img/background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.pg {
+    cursor: pointer;
+}
+
+/* Header */
+
+#header {
+    margin: 5% 0% 0% 25%;
+    width: 50%;
+    border-radius: 5px;
+    padding: 1%;
+    text-align: center;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#header h1 {
+    font-size: 2vw;
+}
+
+#header #conn-pending {
+    color: white;
+}
+
+#header #conn-success {
+    color: #ccffcc;
+    transition: color 0.5s;
+    display: none;
+}
+
+#header #conn-success:hover {
+    color: #7fff7f;
+}
+
+#header ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+#header ul li {
+    display: inline-block;
+    color: white;
+    font-size: 0.9vw;
+    text-transform: uppercase;
+    margin: 0% 4% 0% 4%;
+    cursor: pointer;
+    transition: text-shadow 0.2s;
+}
+
+#header ul li:hover {
+    text-shadow: #FFF 0px 0px 2px, #FFF 0px 0px 5px, #FFF 0px 0px 7px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FFF 0px 0px 20px, #FFF 0px 0px 25px, #FFF 0px 0px 37px, 1px 1px 1px rgba(255,255,255,0);
+}
+
+#header ul #explode:hover {
+    text-shadow: #a70000 0px 0px 2px, #a70000 0px 0px 5px, #a70000 0px 0px 7px, #a70000 0px 0px 10px, #a70000 0px 0px 15px, #a70000 0px 0px 20px, #a70000 0px 0px 25px, #a70000 0px 0px 37px, 1px 1px 1px rgba(255,255,255,0);
+}
+
+/* End of Header */
+
+/* Main Block */
+
+.main {
+    width: 50%;
+    margin: 2% 0% 0% 25%;
+    border-radius: 5px;
+    padding: 1%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.main i {
+    font-size: 3vw;
+}
+
+.main .fa-steam {
+    color: white;
+}
+
+.main .fa-faucet {
+    color: orange;
+}
+
+.main h1 {
+    font-size: 1.8vw;
+    margin-bottom: 6%;
+}
+
+.main p {
+    font-size: 0.9vw;
+    margin: 2% 0% 2% 0%;
+}
+
+.main u {
+    transition: color 0.2s;
+}
+
+.main u:hover {
+    color: cyan;
+}
+
+#home {
+    display: none;
+}
+
+#guide {
+    display: none;
+}
+
+#contact {
+    width: 100%;
+    padding: 5%;
+    text-align: center;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#contact a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#contact i {
+    margin: 0% 3% 0% 3%;
+}
+
+#contact .fa-github:hover {
+    color: #0096DB;    
+}
+
+#contact .fa-globe-americas:hover {
+    color: #b586c9;    
+}
+
+#contact .fa-discord:hover {
+    color: #7289da;
+}
+
+#contact .c-icon {
+    color: white;
+    transition: transform 0.5s, color 0.25s;
+}
+
+#contact .c-icon:hover {
+	transform: translateY(-35%);
+}
+
+/* End of Main Block */
+
+/* Start of Explode Block */
+
+#animate-complete {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    font-size: 2vw;
+    color: white;
+    text-align: center;
+}
+
+#animate-complete .fa-undo {
+    color: #bbffbb;
+    margin-top: 2%;
+}
+
+/* End of Explode Block */
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #header {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 10%;
+        padding: 4%;
+    }
+    
+    #header h1 {
+        font-size: 5vw;
+    }
+
+    #header ul li {
+        font-size: 4vw;
+    }
+    
+    .main {
+        width: 90%;
+        margin-top: 7.5%;
+        margin-left: 5%;
+        padding: 5%;
+    }
+
+    .main h1 {
+        font-size: 3.9vw;
+    }
+
+    .main p {
+        font-size: 3.5vw;
+        margin: 7% 0% 7% 0%;
+    }
+
+    .main i {
+        font-size: 8vw;
+    }
+
+    #animate-complete {
+        font-size: 4vw;
+    }
+
+}
