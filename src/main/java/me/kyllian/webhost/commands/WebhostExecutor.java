@@ -15,13 +15,13 @@ public class WebhostExecutor implements CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String commandLabel, String[] strings) {
-    	if (strings.length > 0 && strings[0].equalsIgnoreCase("reload")) {
+    public boolean onCommand(CommandSender sender, Command command, String commandLabel, String[] args) {
+    	if (args.length > 0 && args[0].equalsIgnoreCase("reload")) {
     		if (sender.hasPermission("webhost.reload")) {
     			plugin.saveDefaultConfig();
     			plugin.reloadConfig();
     			plugin.getServerHandler().stop();
-    			plugin.resetHandler();
+    			plugin.initHandler();
     			sender.sendMessage(colorTranslate("&aConfigs reloaded!"));
     			return true;
     		}

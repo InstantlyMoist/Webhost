@@ -24,12 +24,12 @@ public class WebhostPluginSpigot extends JavaPlugin {
         new Metrics(this, 9354);
 
         getCommand("webhost").setExecutor(new WebhostExecutor(this));
-        
-        resetHandler();
+
+        initHandler();
 
     }
     
-    public void resetHandler() {
+    public void initHandler() {
         serverHandler = new ServerHandler();
 
         fireServer();
