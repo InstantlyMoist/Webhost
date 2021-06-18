@@ -1,2 +1,5 @@
 server
 .idea
+.classpath
+.project
+.settings/org.eclipse.jdt.core.prefs
