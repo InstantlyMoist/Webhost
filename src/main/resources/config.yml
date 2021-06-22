@@ -9,3 +9,6 @@ resource_base: /html # Folder your html files will be in
 welcome_files: # Files that act as your welcome file (Index)
   - index.html
   - index.htm
+
+keystore_filename: key.jks
+keystore_password: test123
